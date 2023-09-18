@@ -1,23 +1,23 @@
-public class Operation {
+public abstract class Operation {
+    private double _numberA;
+    private double _numberB;
 
-    public static double GetRestul(double numberA,double numberB,char operate){
-        double res = 0;
-        switch (operate){
-            case '+':
-                res = numberA + numberB;
-                break;
-            case '-':
-                res = numberA - numberB;
-                break;
-            case '*':
-                res = numberA * numberB;
-                break;
-            case '/':
-                res = numberA / numberB;
-                break;
-            default:
-                System.out.println("您输入的运算符有误");
-        }
-        return res;
+    public  double get_numberA() {
+        return _numberA;
     }
+
+    public void set_numberA(double _numberA) {
+        this._numberA = _numberA;
+    }
+
+    public double get_numberB() {
+        return _numberB;
+    }
+
+    public void set_numberB(double _numberB) {
+        this._numberB = _numberB;
+    }
+
+
+    public abstract double GetRestul();
 }
