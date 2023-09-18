@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Test {
@@ -11,14 +12,23 @@ public class Test {
         System.out.println("输入第二个数B:");
         double numberB = sc.nextDouble();
 
-        if(c.charAt(0) == '+'){
-            System.out.println(" numberA + numberB = " + (numberA + numberB));
-        }else if(c.charAt(0) == '-'){
-            System.out.println(" numberA - numberB = " + (numberA - numberB));
-        }else if(c.charAt(0) == '*'){
-            System.out.println(" numberA * numberB = " + (numberA * numberB));
-        }else if(c.charAt(0) == '/'){
-            System.out.println(" numberA / numberB = " + (numberA / numberB));
+        switch (c.charAt(0)){
+            case '+':
+                System.out.println(" numberA + numberB = " + (numberA + numberB));
+                break;
+            case '-':
+                System.out.println(" numberA + numberB = " + (numberA + numberB));
+                break;
+            case '*':
+                System.out.println(" numberA + numberB = " + (numberA + numberB));
+                break;
+            case '/':
+                if(numberB == 0) {System.out.println("除数不能为0"); return;}
+                System.out.println(" numberA + numberB = " + (numberA + numberB));
+                break;
+            default:
+                System.out.println("您输入的运算符有误");
         }
+
     }
 }
